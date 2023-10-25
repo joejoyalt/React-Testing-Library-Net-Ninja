@@ -18,6 +18,9 @@
     padding: 1rem 0;
 }
 .followers-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 1.25rem;
 }
 
@@ -26,7 +29,12 @@
 }
 
 .follower-item-name h4 {
+    margin: 0;
     margin-right: 0.5rem;
+}
+
+.follower-item-username {
+    margin: 0;
 }
 
 .follower-item img {
