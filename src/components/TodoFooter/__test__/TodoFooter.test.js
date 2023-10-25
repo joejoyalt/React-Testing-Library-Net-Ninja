@@ -1,17 +1,27 @@
 import { render, screen } from '@testing-library/react';
+<<<<<<< Updated upstream
 import TodoFooter from "../TodoFooter"
 import { BrowserRouter } from "react-router-dom"
+=======
+import TodoFooter from '../TodoFooter';
+import { BrowserRouter } from 'react-router-dom';
+>>>>>>> Stashed changes
 
 const MockTodoFooter = ({ numberOfIncompleteTasks }) => {
     return (
         <BrowserRouter>
+<<<<<<< Updated upstream
           <TodoFooter 
             numberOfIncompleteTasks={numberOfIncompleteTasks}
           />
+=======
+            <TodoFooter numberOfIncompleteTasks={numberOfIncompleteTasks} />
+>>>>>>> Stashed changes
         </BrowserRouter>
     )
 }
 
+<<<<<<< Updated upstream
 describe("TodoFooter", () => {
   it('should render the correct amount of incomplete tasks', () => {
     render(
@@ -93,3 +103,17 @@ describe("TodoFooter", () => {
 //   const pElement = screen.getByText(/1 task left/i);
 //   expect(pElement.textContent).toBe("1 task left");
 // });
+=======
+it('render same text passed into title prop', async () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={5} />);
+    const paragraphElement = screen.getByText(/5 tasks left/i);
+    expect(paragraphElement).toBeInTheDocument();
+});
+
+it('render "task" when the number of incomplete tasks is one', async () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+    const paragraphElement = screen.getByText(/1 task left/i);
+    expect(paragraphElement).toBeTruthy()
+});
+
+>>>>>>> Stashed changes
